@@ -1,0 +1,58 @@
+.wrapper {
+  background: white;
+  overflow: hidden;
+}
+.wrapper .container {
+  flex-direction: column;
+  gap: 2rem;
+}
+.wrapper .container .heading {
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.wrapper .container .heading > :nth-child(2) {
+  text-decoration: underline;
+  color: orange;
+  cursor: pointer;
+}
+.wrapper .container .showCase {
+  width: 100%;
+  gap: 1.5rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.wrapper .container .showCase > div {
+  border: 1px solid red;
+  border-radius: 20px;
+  max-width: 30rem;
+  max-height: 30rem;
+  box-shadow: 0px 21px 13px rgba(0, 0, 0, 0.13);
+  cursor: pointer;
+}
+@media (max-width: 640px) {
+  .wrapper .container .showCase > div {
+    width: 100%;
+  }
+}
+.wrapper .container .showCase .image {
+  width: 100%;
+  border: 1px solid green;
+  border-radius: 1.5rem;
+}
+.wrapper .container .showCase .linkBlock {
+  display: flex;
+  gap: 40px;
+}
+.wrapper .container .showCase .linkBlock .link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: red;
+}
+.wrapper .container .showCase .linkBlock .link .icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: red;
+  margin-left: 1rem;
+}/*# sourceMappingURL=Portfolio.module.css.map */

@@ -1,0 +1,119 @@
+@import "../../styles/constants.scss";
+
+.wrapper {
+  background: $bg-main;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    .topSide {
+      display: flex;
+      flex-direction: row;
+      align-self: center;
+      justify-content: center;
+      gap: 20px;
+
+      .leftSide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding-top: 3rem;
+
+        .exp {
+          padding: 0.5rem;
+          gap: 2rem;
+          transition: all 200ms ease-out;
+          &:hover > div {
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.12);
+          }
+          &:hover > div,
+          .leftIcon {
+            transform: scale(1.05);
+            cursor: pointer;
+          }
+          .leftLink {
+            width: 100%;
+          }
+          .leftIcon {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: all 200ms ease;
+          }
+
+          > :nth-child(1) {
+            padding: 8px;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 999px;
+          }
+        }
+      }
+    }
+    .scroll {
+      width: 100%;
+      margin: 0 2rem;
+      .stats {
+        justify-content: center;
+        gap: 4rem;
+        margin-bottom: 30px;
+      }
+    }
+
+    .box {
+      background: $bg-header;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.12);
+      border-radius: 10px;
+      width: 100px;
+      height: 100px;
+      margin: 0.5rem 0.5rem 1.5rem 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      transition: 300ms ease-in-out;
+    }
+
+    .box:hover {
+      transform: scale(1.15);
+    }
+
+    .box > img {
+      height: 50px;
+      pointer-events: none;
+    }
+
+    .box h3 {
+      font-family: Big Shoulders Text;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .marquee {
+      padding: 3rem 0;
+    }
+    .rightSide {
+      @media (max-width: $sm) {
+        text-align: center;
+      }
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .stats {
+        justify-content: flex-start;
+        gap: 4rem;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
