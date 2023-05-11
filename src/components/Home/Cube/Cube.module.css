@@ -1,12 +1,12 @@
-@import "../../../styles/constants.scss";
-
 .cube {
   position: relative;
   width: 70px;
   height: 70px;
   transform-style: preserve-3d;
   animation: spin 4s linear infinite;
-  @media (min-width: $sm) {
+}
+@media (min-width: 480px) {
+  .cube {
     width: 100px;
     height: 100px;
   }
@@ -22,10 +22,12 @@
   font-size: 24px;
   font-weight: bold;
 }
+
 .icon {
   width: 80%;
   height: 80%;
 }
+
 .front {
   transform: translateZ(50px);
 }
@@ -57,4 +59,4 @@
   100% {
     transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
   }
-}
+}/*# sourceMappingURL=Cube.module.css.map */

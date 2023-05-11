@@ -62,8 +62,7 @@ const About = () => {
           </div>
 
           <Marquee
-            gradient={true}
-            speed={70}
+            speed={60}
             pauseOnHover={true}
             pauseOnClick={true}
             delay={0}

@@ -14,45 +14,37 @@ const Home = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`innerWidth ${css.container}`}>
         <div className={css.upperElements}>
-          <motion.span
-            className="primaryText"
-            variants={fadeIn("right", "tween", 0.2, 1)}>
+          <motion.span variants={fadeIn("right", "tween", 0.2, 1)}>
             <div className={css.containerN}>
               <div className={css.boxN}>
                 <div className={css.helloN}>
-                  <span className={css.blockN}></span>
-                  <h2>
+                  <span className={css.blockColorH}></span>
+                  <p className={`primarySmallText ${css.heyText}`}>
                     Hey There,
                     <br />
-                  </h2>
+                  </p>
                 </div>
 
                 <div className={css.titleN}>
-                  <span className={css.blockN}></span>
-                  <h1>
+                  <span className={css.blockColorN}></span>
+                  <p className={css.myName}>
                     I'm Nataliia Boiko<span></span>
                     <br />
-                  </h1>
+                  </p>
                 </div>
 
                 <div className={css.roleN}>
-                  <div className={css.blockN}></div>
-                  <p>FrontEnd developer</p>
+                  <span className={css.blockColorR}></span>
+                  <p className="secondaryText">FrontEnd developer</p>
                 </div>
               </div>
             </div>
           </motion.span>
 
           <motion.span
-            className="secondaryText"
+            className={css.loveText}
             variants={fadeIn("left", "tween", 0.4, 1)}>
             <TypeWriterEffect
-              textStyle={{
-                fontFamily: "Eudoxus Sans",
-                color: "$secondary",
-                fontSize: 32,
-                fontWeight: 600,
-              }}
               startDelay={4500}
               cursorColor="inherit"
               text="I Love What I Do!"
@@ -60,29 +52,29 @@ const Home = () => {
             />
           </motion.span>
         </div>
-
-        <motion.div
-          variants={fadeIn("up", "tween", 0.3, 1)}
-          className={css.person}>
-          <motion.img
-            variants={slideIn("up", "tween", 0.5, 1.3)}
-            src="./person2.png"
-            alt=""
-          />
-        </motion.div>
-
-        <motion.div
-          className={css.lowerElements}
-          variants={fadeIn("up", "tween", 0.4, 1)}>
-          <span className="secondaryText">
-            Let's make something <br />
-            amazing together. Start by{" "}
-            <a className={css.email} href="mailto:nata.boyko.kras@gmail.com">
-              saying hi
-            </a>
-          </span>
-          <Cube />
-        </motion.div>
+        <div className={css.lowerBlocks}>
+          <motion.div
+            className={css.lowerElements}
+            variants={fadeIn("up", "tween", 0.4, 1)}>
+            <span className={`secondaryText ${css.letsMake}`}>
+              Let's make something <br />
+              amazing together. Start by{" "}
+              <a className={css.email} href="mailto:nata.boyko.kras@gmail.com">
+                saying hi
+              </a>
+            </span>
+            <Cube />
+          </motion.div>
+          <motion.div
+            variants={fadeIn("up", "tween", 0.3, 1)}
+            className={css.person}>
+            <motion.img
+              variants={slideIn("up", "tween", 0.5, 1.3)}
+              src="./person2.png"
+              alt=""
+            />
+          </motion.div>
+        </div>
       </motion.div>
     </section>
   );

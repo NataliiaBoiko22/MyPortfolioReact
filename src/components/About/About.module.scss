@@ -57,7 +57,6 @@
     }
     .scroll {
       width: 100%;
-      margin: 0 2rem;
       .stats {
         justify-content: center;
         gap: 4rem;
@@ -69,8 +68,8 @@
       background: $bg-header;
       box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.12);
       border-radius: 10px;
-      width: 100px;
-      height: 100px;
+      width: 60px;
+      height: 60px;
       margin: 0.5rem 0.5rem 1.5rem 0.5rem;
       display: flex;
       flex-direction: column;
@@ -78,6 +77,10 @@
       justify-content: center;
       padding: 2rem 1rem;
       transition: 300ms ease-in-out;
+      @media (min-width: $md) {
+        width: 100px;
+        height: 100px;
+      }
     }
 
     .box:hover {
@@ -85,24 +88,30 @@
     }
 
     .box > img {
-      height: 50px;
+      height: 35px;
       pointer-events: none;
+      @media (min-width: $md) {
+        height: 50px;
+      }
     }
 
     .box h3 {
       font-family: Big Shoulders Text;
       font-style: normal;
       font-weight: 500;
-      font-size: 22px;
+      font-size: 14px;
       text-align: center;
       margin-top: 1rem;
+      @media (min-width: $md) {
+        font-size: 22px;
+      }
     }
 
     .marquee {
       padding: 3rem 0;
     }
     .rightSide {
-      @media (max-width: $sm) {
+      @media (min-width: $sm) {
         text-align: center;
       }
       display: flex;

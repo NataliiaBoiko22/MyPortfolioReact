@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function useOutsideAlerter({menuRef, setMenuOpened}) {
+export default function useOutsideAlerter({ menuRef, setMenuOpened }) {
   const viewport_width = document.documentElement.clientWidth;
   useEffect(() => {
     /**
@@ -9,16 +9,26 @@ export default function useOutsideAlerter({menuRef, setMenuOpened}) {
     function handleClickOutside(event) {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         if (viewport_width <= 640) {
-            setMenuOpened(false);
+          setMenuOpened(false);
         }
       }
     }
-    // Bind the event listener
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [menuRef]);
 
+    function handleKeyDown(event) {
+      if (event.keyCode === 27) {
+        // Close the menu when pressing the Escape key
+        setMenuOpened(false);
+      }
+    }
+
+    // Bind the event listeners
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      // Unbind the event listeners on clean up
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [menuRef, setMenuOpened]);
 }

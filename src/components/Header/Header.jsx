@@ -6,16 +6,24 @@ import { getMenuStyles, headerVariants } from "../../utils/motion";
 import { motion } from "framer-motion";
 import useHeaderShadow from "../../hooks/useHeaderShadow";
 import useOutsideAlerter from "../../hooks/useOutsideAlerter";
+import resume from "../../assets/CVNataliiaBoiko.pdf";
 const Header = () => {
   const menuRef = useRef(null);
   const [menuOpened, setMenuOpened] = useState(false);
   const headerShadow = useHeaderShadow();
 
+  const handleBurgerClick = () => {
+    return setMenuOpened((prevMenuOpened) => !prevMenuOpened);
+  };
   //to handle click outside of sidebar on mobile
   useOutsideAlerter({
     menuRef,
-    setMenuOpened,
+    setMenuOpened: () => setMenuOpened(false),
   });
+  const handleMenuLinkClick = () => {
+    // Close the menu when a link is clicked
+    setMenuOpened(false);
+  };
   const activeLink = ({ isActive }) =>
     isActive ? `${css.link} ${css.activeLink}` : css.link;
   return (
@@ -40,26 +48,39 @@ const Header = () => {
           ref={menuRef}
           style={getMenuStyles(menuOpened)}
           className={`flexCenter ${css.menu}`}>
-          <NavLink className={activeLink} to="/">
+          <NavLink className={activeLink} to="/" onClick={handleMenuLinkClick}>
             Hero
           </NavLink>
-          <NavLink className={activeLink} to="/about">
+          <NavLink
+            className={activeLink}
+            to="/about"
+            onClick={handleMenuLinkClick}>
             About
           </NavLink>
-          <NavLink className={activeLink} to="/portfolio">
+          <NavLink
+            className={activeLink}
+            to="/portfolio"
+            onClick={handleMenuLinkClick}>
             Portfolio
           </NavLink>
-          <NavLink className={activeLink} to="/resume">
-            Resume
-          </NavLink>
-          <NavLink className={activeLink} to="/contacts">
+          <NavLink
+            className={activeLink}
+            to="/contacts"
+            onClick={handleMenuLinkClick}>
             Contacts
           </NavLink>
+          <a
+            // href="https://drive.google.com/file/d/1tOa5pELmiVr2reIWZOWStVgPNE7o00-d/view?usp=sharing"
+            href={resume}
+            rel="opener noreferrer"
+            target="_blank"
+            className={css.resumeLink}
+            onClick={handleMenuLinkClick}>
+            Resume
+          </a>
         </ul>
         {/*for medium and small screens */}
-        <div
-          className={css.menuIcon}
-          onClick={() => setMenuOpened((prev) => !prev)}>
+        <div className={css.menuIcon} onClick={handleBurgerClick}>
           <BiMenuAltRight size={30} />
         </div>
       </div>

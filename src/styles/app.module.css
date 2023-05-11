@@ -1,5 +1,6 @@
 .container {
+  height: 100vh;
   overflow-x: clip;
   position: relative;
-  color: #0D2F3F;
+  color: #0d2f3f;
 }/*# sourceMappingURL=app.module.css.map */

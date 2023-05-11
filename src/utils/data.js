@@ -4,23 +4,26 @@ import { MdWorkspacesOutline } from "react-icons/md";
 
 export const leftContact = [
   {
-    href: "https://github.com/NataliiaBoiko22",
-    alt: "GitHub",
-    src: "/src/assets/icons/github.svg",
-    bg: "rgba(255, 165, 0, 0.5)",
+    href: "https://discordapp.com/users/1017713242824507442/",
+
+    alt: "Discord",
+    src: "/src/assets/icons/discord.svg",
+    bg: "rgb(124, 182, 63, 0.5)",
+    descr: "NataliiaBoiko#3597",
   },
   {
     href: "https://www.linkedin.com/in/nataliia-boiko-ab48a9242/",
     alt: "Linkedin",
     src: "/src/assets/icons/linkedin.svg",
     bg: "rgb(0, 123, 181, 0.5)",
+    descr: "nataliia-boiko",
   },
   {
-    href: "https://discordapp.com/users/1017713242824507442/",
-
-    alt: "Discord",
-    src: "/src/assets/icons/discord.svg",
-    bg: "rgb(124, 182, 63, 0.5)",
+    href: "https://github.com/NataliiaBoiko22",
+    alt: "GitHub",
+    src: "/src/assets/icons/github.svg",
+    bg: "rgba(255, 165, 0, 0.5)",
+    descr: "NataliiaBoiko22",
   },
 ];
 
@@ -30,12 +33,14 @@ export const footerContact = [
     alt: "Email",
     src: "../../src/assets/icons/email.svg",
     bg: "rgba(255, 165, 0, 0.5)",
+    descr: "nata.boyko.kras@gmail.com",
   },
   {
     href: "tel:+48889136970",
     alt: "Call",
     src: "/src/assets/icons/call.svg",
     bg: "rgb(0, 123, 181, 0.5)",
+    descr: `(+48) 889 136 970`,
   },
   {
     href: "https://t.me/boikonataliia",
@@ -43,6 +48,7 @@ export const footerContact = [
     alt: "Telegram",
     src: "../../src/assets/icons/telegram.svg",
     bg: "rgb(124, 182, 63, 0.5)",
+    descr: "boikonataliia",
   },
 ];
 export const WhoIam = [
@@ -61,7 +67,7 @@ export const courses = [
     detail: "../../public/RSSchool.png",
   },
   {
-    place: "SoftServe|ITAcademy",
+    place: "SoftServe ITAcademy",
     duration: "Oct 2022 - Jan 2023",
     role: "Development, design and architecture of modern software system",
     descr: " ",
@@ -77,41 +83,3 @@ export const courses = [
     detail: "../../public/SheCodesPlus.png",
   },
 ];
-
-export const sliderSettings = {
-  dots: true,
-  infinite: false,
-  speed: 1000,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  initialSlide: 0,
-  touchMove: true,
-  useCSS: true,
-
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true,
-      },
-    },
-    {
-      breakpoint: 1000,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};

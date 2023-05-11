@@ -1,5 +1,9 @@
 .bg-primary {
-  background: #f8f7f1;
+  background: #f9f9f7;
+}
+
+.bg-secondary {
+  background: #f2efe7;
 }
 
 .innerWidth {
@@ -15,18 +19,15 @@
 .paddings {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .paddings {
-    padding: 4rem;
-  }
-}
-@media (min-width: 1280px), (min-width: 768px) {
-  .paddings {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
   }
 }
 
@@ -36,7 +37,7 @@
   padding-right: 1.5rem;
   /* 24px */
 }
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .xPaddings {
     padding-left: 4rem;
     padding-right: 4rem;
@@ -47,7 +48,7 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .yPaddings {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -63,7 +64,7 @@
 .topPaddings {
   padding-top: 3rem;
 }
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .topPaddings {
     padding-top: 4rem;
   }
@@ -77,7 +78,7 @@
 .bottomPaddings {
   padding-bottom: 3rem;
 }
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .bottomPaddings {
     padding-bottom: 4rem;
   }
@@ -106,121 +107,368 @@
 }
 
 .primaryText {
-  font-size: 3rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
-@media (max-width: 640px) {
+@media (min-width: 480px) {
   .primaryText {
     font-size: 2.5rem;
   }
 }
-
-.secondaryText {
-  line-height: 50px;
-  font-size: 1.3rem;
-  font-weight: 500;
-}
-@media (max-width: 640px) {
-  .secondaryText {
-    font-size: 1.1rem;
-    line-height: 40px;
+@media (min-width: 1280px) {
+  .primaryText {
+    font-size: 3.5rem;
   }
 }
 
-.anchor {
-  display: block;
-  position: relative;
-  top: -100px;
-  visibility: hidden;
+.primarySmallText {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+@media (min-width: 480px) {
+  .primarySmallText {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 480px) {
+  .primarySmallText {
+    font-size: 2rem;
+  }
+}
+
+.secondaryText {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+@media (min-width: 480px) {
+  .secondaryText {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .secondaryText {
+    font-size: 1.4rem;
+  }
 }
 
 .wrapper {
   overflow: hidden;
+  padding-bottom: 0 !important;
+  height: 78%;
 }
 .wrapper .container {
   position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   z-index: 1;
 }
 .wrapper .container .upperElements {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-@media (max-width: 640px) {
+@media (min-width: 480px) {
   .wrapper .container .upperElements {
+    flex-direction: row;
     justify-content: center;
     text-align: center;
     gap: 2rem;
   }
 }
-.wrapper .container .lowerElements {
-  margin-top: 12rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.wrapper .container .upperElements .loveText {
+  font-family: "Eudoxus Sans";
+  color: "$secondary";
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 1rem;
 }
-@media (max-width: 640px), (max-width: 768px) {
-  .wrapper .container .lowerElements {
+.wrapper .container .containerN {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .container .containerN .boxN {
+  width: 100%;
+  height: 5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 480px) {
+  .wrapper .container .containerN .boxN {
+    height: 10rem;
+  }
+}
+.wrapper .container .containerN .boxN .helloN {
+  width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 2rem;
+}
+@media (min-width: 480px) {
+  .wrapper .container .containerN .boxN .helloN {
+    height: 3rem;
+  }
+}
+.wrapper .container .containerN .boxN .helloN .blockN {
+  width: 0%;
+  height: inherit;
+  background: rgba(22, 94, 161, 0.3);
+  position: absolute;
+  animation: mainBlock 1.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  display: flex;
+}
+.wrapper .container .containerN .boxN .helloN h2 {
+  color: rgb(25, 24, 24);
+  animation: mainFadeIn 2s forwards;
+  animation-delay: 1.2s;
+  opacity: 0;
+  display: flex;
+  align-items: baseline;
+  position: relative;
+}
+.wrapper .container .containerN .boxN .titleN {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 2.2rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 480px) {
+  .wrapper .container .containerN .boxN .titleN {
+    height: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+}
+.wrapper .container .containerN .boxN .titleN .blockN {
+  width: 0%;
+  height: inherit;
+  background: rgba(252, 201, 15, 0.3);
+  position: absolute;
+  animation: mainBlock 1.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 1.8s;
+  display: flex;
+  margin-top: 0.5rem;
+}
+@media (min-width: 480px) {
+  .wrapper .container .containerN .boxN .titleN .blockN {
+    margin-top: 1rem;
+  }
+}
+.wrapper .container .containerN .boxN .titleN h1 {
+  color: rgb(25, 24, 24);
+  animation: mainFadeIn 2s forwards;
+  animation-delay: 2.8s;
+  opacity: 0;
+  display: flex;
+  align-items: baseline;
+  position: relative;
+  line-height: 1.2;
+  height: 2rem;
+}
+.wrapper .container .containerN .boxN .titleN h1 span {
+  width: 0px;
+  height: inherit;
+  border-radius: 50%;
+  background: orange;
+  animation: popIn 1.2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 3.8s;
+  margin-left: 5px;
+  position: absolute;
+  right: -10px;
+  bottom: 1px;
+}
+.wrapper .container .containerN .boxN .roleN {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+}
+@media (min-width: 480px) {
+  .wrapper .container .containerN .boxN .roleN {
+    height: 2.5rem;
+  }
+}
+.wrapper .container .containerN .boxN .roleN .blockN {
+  width: 0%;
+  height: inherit;
+  background: rgba(124, 182, 63, 0.3);
+  position: absolute;
+  animation: secBlock 1.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  animation-delay: 3.6s;
+  display: flex;
+}
+.wrapper .container .containerN .boxN .roleN p {
+  animation: secFadeIn 1.6s forwards;
+  animation-delay: 4.6s;
+  opacity: 0;
+  font-weight: 500;
+  font-family: "Lato";
+  text-shadow: 0.3px 0.3px 0.3px #000, 0.5px 0.5px 0.5px #000, 1px 1px 0.5px #000;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-top: 0.6rem;
+}
+@media (min-width: 480px) {
+  .wrapper .container .containerN .boxN .roleN p {
+    margin-top: 1rem;
+  }
+}
+@keyframes mainBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes secBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes popIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: #e9d856;
+    border: 0px solid #ddd;
+    opacity: 0;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+    background: #e9d856;
+    opacity: 1;
+    bottom: 45px;
+  }
+  65% {
+    width: 7px;
+    height: 7px;
+    bottom: 0px;
+    width: 15px;
+  }
+  80% {
+    width: 10px;
+    height: 10px;
+    bottom: 20px;
+  }
+  100% {
+    width: 7px;
+    height: 7px;
+    background: #e9d856;
+    border: 0px solid #222;
+    bottom: 2px;
+    @media (min-width: 480px) {
+      .wrapper .container {
+        bottom: 10px;
+      }
+    }
+  }
+}
+@keyframes secFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+.wrapper .container .lowerBlocks {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+.wrapper .container .lowerBlocks .lowerElements {
+  position: relative;
+  padding: 0.5rem;
+}
+@media (min-width: 480px) {
+  .wrapper .container .lowerBlocks .lowerElements {
     margin-top: 4rem;
     gap: 2rem;
     justify-content: center;
   }
 }
-.wrapper .container .lowerElements .experience {
+.wrapper .container .lowerBlocks .lowerElements .letsMake {
   display: flex;
-  align-items: center;
+  justify-content: end;
+  align-items: end;
   gap: 1rem;
 }
-.wrapper .container .lowerElements .experience > :nth-child(2) {
-  line-height: 25px;
+.wrapper .container .lowerBlocks .lowerElements .letsMake .email {
+  color: orange;
 }
-.wrapper .container .lowerElements .certificate {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.wrapper .container .lowerElements .certificate img {
-  margin-bottom: 1rem;
-  width: 3.5rem;
-}
-.wrapper .container .person {
+.wrapper .container .lowerBlocks .lowerElements > div {
   position: absolute;
+  bottom: -8rem;
+  left: -3rem;
+}
+.wrapper .container .lowerBlocks .person {
+  position: relative;
   bottom: -2rem;
-  margin: auto;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
   background-image: url("../splash2.png");
   background-repeat: no-repeat;
   background-size: 20rem;
-  left: 43%;
+  left: 15%;
 }
-@media (max-width: 640px), (max-width: 768px) {
-  .wrapper .container .person {
-    position: relative;
-    left: 0;
-    background-size: 20rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-position: center;
+@media (min-width: 480px) {
+  .wrapper .container .lowerBlocks .person {
+    background-size: 22rem;
   }
 }
-.wrapper .container .person img {
+.wrapper .container .lowerBlocks .person img {
+  width: 18rem;
   margin-bottom: -5px;
 }
-@media (max-width: 640px) {
-  .wrapper .container .person img {
-    width: 28rem;
+@media (min-width: 768px) {
+  .wrapper .container .lowerBlocks .person img {
+    width: 24rem;
   }
 }
-.wrapper .container .email {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  color: orange;
-}
-@media (max-width: 640px) {
-  .wrapper .container .email {
-    position: relative;
-    display: none;
+@media (min-width: 1280px) {
+  .wrapper .container .lowerBlocks .person img {
+    width: 28rem;
   }
 }/*# sourceMappingURL=Home.module.css.map */

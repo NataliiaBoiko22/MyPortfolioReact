@@ -1,63 +1,112 @@
 @import "../../styles/global.scss";
+@import "/src/styles/constants.scss";
 .wrapper {
   overflow: hidden;
   padding-bottom: 0 !important;
+  height: calc(100vh - 9rem);
+  @media (min-width: $l) {
+    height: calc(100vh - 12rem);
+  }
+  @media (min-width: $xl) {
+    height: calc(100vh - 12rem);
+  }
   .container {
     position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     z-index: 1;
-
     .upperElements {
-      @media (max-width: $sm) {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @media (min-width: $md) {
+        // flex-direction: row;
         justify-content: center;
         text-align: center;
         gap: 2rem;
+        // align-items: end;
       }
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      @media (min-width: $md) {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        gap: 2rem;
+      }
+      @media (min-width: $l) {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        gap: 2rem;
+      }
+      @media (min-width: $xl) {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        gap: 2rem;
+      }
+      .loveText {
+        font-family: "Eudoxus Sans";
+        color: "$secondary";
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 1rem;
+        @media (min-width: $md) {
+          font-size: 18px;
+        }
+        @media (min-width: $l) {
+          font-size: 20px;
+        }
+        @media (min-width: $xl) {
+          font-size: 22px;
+        }
+      }
     }
 
     ////////////////////////////////////////
 
     .containerN {
-      // width: 100%;
-      // height: 100vh;
-      // background: #232323;
-
       display: flex;
       justify-content: center;
       align-items: center;
 
       .boxN {
         width: 100%;
-        height: 10rem;
         position: relative;
         display: flex;
-        justify-content: center;
+        align-items: baseline;
         flex-direction: column;
 
         .helloN {
           width: 50%;
           position: relative;
           display: flex;
-          align-items: center;
-          height: 3rem;
+          // align-items: center;
 
-          .blockN {
+          .blockColorH {
             width: 0%;
-            height: inherit;
+
             background: rgba(22, 94, 161, 0.3);
 
             position: absolute;
             animation: mainBlock 1.8s cubic-bezier(0.74, 0.06, 0.4, 0.92)
               forwards;
             display: flex;
+            height: 2rem;
+            @media (min-width: $sm) {
+              height: 2.5rem;
+            }
+            @media (min-width: $l) {
+              height: 3rem;
+            }
           }
 
-          h2 {
+          .heyText {
             color: rgb(25, 24, 24);
-            font-size: 2rem;
             -webkit-animation: mainFadeIn 2s forwards;
             -o-animation: mainFadeIn 2s forwards;
             animation: mainFadeIn 2s forwards;
@@ -74,25 +123,30 @@
           position: relative;
           display: flex;
           align-items: center;
-          height: 3rem;
-          line-height: 1.2;
-          margin-bottom: 1rem;
-
-          .blockN {
+          justify-content: end;
+          .blockColorN {
             width: 0%;
-            height: inherit;
+
             background: rgba(252, 201, 15, 0.3);
             position: absolute;
             animation: mainBlock 1.8s cubic-bezier(0.74, 0.06, 0.4, 0.92)
               forwards;
             animation-delay: 1.8s;
             display: flex;
-            margin-top: 1rem;
+            bottom: 0.1rem;
+            @media (min-width: $md) {
+              height: 2.5rem;
+            }
+            @media (min-width: $l) {
+              height: 4rem;
+            }
+            @media (min-width: $xl) {
+              height: 4.5rem;
+            }
           }
 
-          h1 {
+          .myName {
             color: rgb(25, 24, 24);
-            font-size: 3rem;
             -webkit-animation: mainFadeIn 2s forwards;
             -o-animation: mainFadeIn 2s forwards;
             animation: mainFadeIn 2s forwards;
@@ -102,9 +156,20 @@
             align-items: baseline;
             position: relative;
 
+            height: inherit;
+            font-size: 1.8rem;
+            font-weight: bold;
+            @media (min-width: $md) {
+              font-size: 2.5rem;
+            }
+            @media (min-width: $l) {
+              font-size: 3.5rem;
+            }
+            @media (min-width: $xl) {
+              font-size: 4rem;
+            }
             span {
               width: 0px;
-              height: inherit;
               -webkit-border-radius: 50%;
               -moz-border-radius: 50%;
               border-radius: 50%;
@@ -115,10 +180,17 @@
               animation: popIn 1.2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
               animation-delay: 3.8s;
               margin-left: 5px;
-              margin-top: 10px;
+              margin-top: 0px;
+              margin-bottom: 0px;
               position: absolute;
-              bottom: 10px;
-              right: -12px;
+              right: -10px;
+              bottom: 1px;
+              @media (min-width: $l) {
+                margin-bottom: 5px;
+              }
+              @media (min-width: $xl) {
+                margin-bottom: 9px;
+              }
             }
           }
         }
@@ -128,9 +200,16 @@
           position: relative;
           display: flex;
           align-items: center;
-          height: 2.5rem;
+          height: 1.5rem;
 
-          .blockN {
+          @media (min-width: $sm) {
+            height: 2.5rem;
+          }
+          @media (min-width: $l) {
+            height: 3rem;
+            margin-top: 1rem;
+          }
+          .blockColorR {
             width: 0%;
             height: inherit;
             background: rgb(124, 182, 63, 0.3);
@@ -150,10 +229,13 @@
             text-shadow: 0.3px 0.3px 0.3px #000, 0.5px 0.5px 0.5px #000,
               1px 1px 0.5px #000;
             color: black;
-            font-size: 1.5rem;
+
             text-transform: uppercase;
             letter-spacing: 5px;
-            margin-top: 1rem;
+            margin-top: 0.6rem;
+            @media (min-width: $sm) {
+              margin-top: 1rem;
+            }
           }
         }
       }
@@ -229,7 +311,7 @@
         height: 7px;
         background: #e9d856;
         border: 0px solid #222;
-        bottom: 10px;
+        bottom: 5px;
       }
     }
 
@@ -241,70 +323,158 @@
         opacity: 0.5;
       }
     }
-
-    // /////////////////////////////////
-    .lowerElements {
-      @media (max-width: $sm), (max-width: $md) {
-        margin-top: 4rem;
-        gap: 2rem;
-        justify-content: center;
-      }
-      margin-top: 16rem;
-      margin-bottom: 3rem;
+    .lowerBlocks {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      .experience {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        > :nth-child(2) {
-          line-height: 25px;
-        }
-      }
-
-      .certificate {
-        display: flex;
+      align-items: end;
+      justify-content: center;
+      flex-direction: column;
+      @media (min-width: $sm) {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+      }
+      @media (min-width: $md) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      @media (min-width: $l) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      @media (min-width: $xl) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .lowerElements {
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: flex-end;
+        position: relative;
+        padding: 0.5rem;
+        // position: absolute;
+        // left: 0;
+        @media (min-width: $sm) {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
 
-        img {
-          margin-bottom: 1rem;
-          width: 3.5rem;
+          margin-top: 0.5rem;
+          gap: 2rem;
+        }
+        @media (min-width: $md) {
+          display: flex;
+          flex-direction: row;
+          padding-top: 14rem;
+        }
+        @media (min-width: $mdl) {
+          display: flex;
+          flex-direction: column;
+          padding-top: 12rem;
+        }
+        @media (min-width: $l) {
+          display: flex;
+          flex-direction: row;
+          padding-top: 4rem;
+        }
+        @media (min-width: $xl) {
+          display: flex;
+          flex-direction: row;
+        }
+        // justify-content: space-between;
+        .letsMake {
+          display: flex;
+          justify-content: end;
+          align-items: end;
+          gap: 1rem;
+          @media (min-width: $md) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          @media (min-width: $mdl) {
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+          }
+          .email {
+            color: $active;
+          }
         }
       }
-    }
+      .lowerElements > div {
+        display: none;
+        position: absolute;
+        @media (min-width: $sm) {
+          display: block;
+          bottom: -8rem;
+          left: -3rem;
+        }
 
-    .person {
-      position: relative;
-      bottom: -2rem;
-      @media (max-width: $sm), (max-width: $md) {
+        @media (min-width: $md) {
+          display: block;
+          bottom: 5rem;
+          left: 14rem;
+        }
+        @media (min-width: $mdl) {
+          bottom: 5rem;
+          left: 18rem;
+        }
+        @media (min-width: $l) {
+          bottom: 5rem;
+          left: 28rem;
+        }
+        @media (min-width: $xl) {
+          bottom: 2rem;
+          left: 30rem;
+        }
+      }
+      .person {
         position: relative;
-        left: 0;
-        background-size: 20rem;
+        bottom: -2rem;
         display: flex;
         align-items: center;
         justify-content: center;
         background-position: center;
-      }
-      position: absolute;
-      bottom: -2rem;
-      margin: auto;
-      background-image: url("../splash2.png");
-      background-repeat: no-repeat;
-      background-size: 20rem;
-      left: 55%;
-
-      img {
-        @media (max-width: $sm) {
-          width: 28rem;
+        background-image: url("../splash2.png");
+        background-repeat: no-repeat;
+        background-size: 20rem;
+        left: -5%;
+        @media (min-width: $sm) {
+          background-size: 20rem;
+          bottom: -1rem;
+          left: 15%;
         }
-        margin-bottom: -5px;
-      }
-    }
 
-    .email {
-      color: $active;
+        @media (min-width: $md) {
+          background-size: 20rem;
+          bottom: 0;
+          left: -5%;
+        }
+        @media (min-width: $l) {
+          background-size: 20rem;
+          bottom: 4rem;
+        }
+        @media (min-width: $xl) {
+          background-size: 22rem;
+          bottom: 7rem;
+        }
+        img {
+          width: 18rem;
+          @media (min-width: $md) {
+            width: 20rem;
+          }
+          @media (min-width: $l) {
+            width: 20rem;
+          }
+          @media (min-width: $xl) {
+            width: 22rem;
+          }
+          margin-bottom: -5px;
+        }
+      }
     }
   }
 }

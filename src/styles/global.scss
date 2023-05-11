@@ -17,19 +17,28 @@
 }
 
 .paddings {
-  @media (min-width: $sm) {
-    padding: 3rem;
-  }
-
-  @media (min-width: $xl), (min-width: $md) {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  @media (min-width: $sm) {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  @media (min-width: $md) {
+    padding-left: 3rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  @media (min-width: $l) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 .xPaddings {
@@ -45,18 +54,20 @@
 }
 
 .yPaddings {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   @media (min-width: $sm) {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
-
+  @media (min-width: $md) {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+  }
   @media (min-width: $xl) {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
-
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .topPaddings {
@@ -101,31 +112,39 @@
 }
 
 .primaryText {
-  @media (max-width: $sm) {
+  font-size: 1.8rem;
+  font-weight: bold;
+  @media (min-width: $md) {
     font-size: 2.5rem;
   }
-  font-size: 3rem;
-  font-weight: bold;
+  @media (min-width: $l) {
+    font-size: 3.5rem;
+  }
 }
 .primarySmallText {
-  @media (max-width: $sm) {
+  font-size: 1.2rem;
+  font-weight: bold;
+  @media (min-width: $md) {
     font-size: 1.5rem;
   }
-  font-size: 2rem;
-  font-weight: bold;
+  @media (min-width: $l) {
+    font-size: 2.4rem;
+  }
+  @media (min-width: $xl) {
+    font-size: 2.8rem;
+  }
 }
 .secondaryText {
-  @media (max-width: $sm) {
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  @media (min-width: $sm) {
     font-size: 1.1rem;
-    line-height: 40px;
   }
-  line-height: 50px;
-  font-size: 1.3rem;
-  font-weight: 500;
-}
-.anchor {
-  display: block;
-  position: relative;
-  top: -100px;
-  visibility: hidden;
+  @media (min-width: $md) {
+    font-size: 1.2rem;
+  }
+  @media (min-width: $l) {
+    font-size: 1.3rem;
+  }
 }

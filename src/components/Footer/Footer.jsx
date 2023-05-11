@@ -7,7 +7,7 @@ import { BsFillSuitHeartFill } from "react-icons/bs";
 import { footerContact } from "../../utils/data";
 const Footer = () => {
   return (
-    <motion.section
+    <motion.div
       variants={staggerChildren}
       initial="hidden"
       whileInView="show"
@@ -43,7 +43,7 @@ const Footer = () => {
           </ul>
         </div>
       </motion.div>
-    </motion.section>
+    </motion.div>
   );
 };
 

@@ -14,6 +14,7 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 const App = () => {
   const [load, upadateLoad] = useState(true);
 
@@ -31,7 +32,7 @@ const App = () => {
         className={`bg-primary ${css.container}`}
         id={load ? "no-scroll" : "scroll"}>
         <Header />
-        {/* <ScrollToTop /> */}
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

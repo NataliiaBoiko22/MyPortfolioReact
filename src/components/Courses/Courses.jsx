@@ -15,11 +15,10 @@ const Work = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className={`paddings ${css.wrapper}`}>
+      className={` ${css.wrapper}`}>
       <a className="anchor" id="work"></a>
 
-      <div
-        className={`paddings yPaddings innerWidth flexCenter ${css.container}`}>
+      <div className={` yPaddings innerWidth flexCenter ${css.container}`}>
         {/* heading */}
         <span className="primaryText">My Education</span>
 
@@ -31,17 +30,21 @@ const Work = () => {
                 key={i}
                 className={`flexCenter ${css.exp}`}>
                 <div className={css.post}>
-                  <h1>{exp.place}</h1>
-                  <p className={css.certificate}>
-                    {exp.duration}{" "}
+                  <span className={`secondaryText ${css.school}`}>
+                    {exp.place}
+                  </span>
+                  <span className={css.certificate}>
+                    <span className={css.certificateData}>{exp.duration} </span>
                     <a href={exp.detail} className={css.certificateLink}>
                       Certificate
                     </a>
-                  </p>
+                  </span>
                 </div>
                 <div className={css.role}>
-                  <h1>{exp.role}</h1>
-                  <h4>{exp.descr}</h4>
+                  <span className={`secondaryText ${css.roleName}`}>
+                    {exp.role}
+                  </span>
+                  <span className={css.roleDescr}>{exp.descr}</span>
                 </div>
               </motion.div>
             );
