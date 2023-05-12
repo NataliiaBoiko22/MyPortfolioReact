@@ -33,9 +33,16 @@ const Footer = () => {
           <ul className={css.menu}>
             {footerContact.map((cont, i) => {
               return (
-                <li key={i} style={{ background: cont.bg }}>
+                <li
+                  key={i}
+                  className={css.menuLink}
+                  style={{ background: cont.bg }}>
                   <a href={cont.href}>
-                    <img src={cont.src} alt={cont.alt} />
+                    <img
+                      src={cont.src}
+                      alt={cont.alt}
+                      className={css.menuImg}
+                    />
                   </a>
                 </li>
               );

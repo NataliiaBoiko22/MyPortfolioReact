@@ -2,6 +2,8 @@
 
 .wrapper {
   background: $bg-main;
+  height: calc(100vh - 9rem);
+  overflow: hidden;
   @media (min-width: $l) {
     height: calc(100vh - 12rem);
   }
@@ -12,6 +14,7 @@
     height: 100%;
     .topBlock {
       position: relative;
+      text-align: start;
       .decor {
         display: block;
         width: 25rem;
@@ -29,8 +32,20 @@
     }
     .bottomBlock {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-between;
+      font-size: 0.7rem;
+      padding-top: 1rem;
+      @media (min-width: $sm) {
+        font-size: 0.8rem;
+      }
+      @media (min-width: $md) {
+        font-size: 0.9rem;
+      }
+      @media (min-width: $xl) {
+        font-size: 1rem;
+        flex-direction: row;
+      }
     }
     .upperElements {
       display: flex;
@@ -50,6 +65,7 @@
       flex-direction: column;
       justify-content: center;
       width: min-content;
+      padding-top: 1rem;
       .contactsItem {
         display: flex;
         flex-direction: row;
@@ -61,14 +77,20 @@
           display: flex;
           flex-direction: row;
           align-items: center;
-          gap: 1rem;
+          gap: 0.6rem;
           width: 100%;
           text-decoration: none;
+          @media (min-width: $sm) {
+            gap: 1rem;
+          }
 
           .description {
             color: $text;
-            font-size: 1.4rem;
+            font-size: 1rem;
             width: max-content;
+            @media (min-width: $sm) {
+              font-size: 1.4rem;
+            }
           }
           &:hover .description {
             color: $active;
@@ -77,11 +99,19 @@
             background-color: $active;
           }
           .leftIcon {
-            width: 3rem;
-            height: 3rem;
+            width: 2rem;
+            height: 2rem;
             border-radius: 50%;
             object-fit: contain;
             transition: all 200ms ease;
+            @media (min-width: $sm) {
+              width: 2.5rem;
+              height: 2.5rem;
+            }
+            @media (min-width: $md) {
+              width: 3rem;
+              height: 3rem;
+            }
           }
         }
       }

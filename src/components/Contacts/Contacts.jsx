@@ -25,7 +25,7 @@ const Contacts = () => {
                 You can contact me at the places mentioned below.
               </p>
             </div>
-            <div className={`xPaddings yPaddings ${css.contactsBlock}`}>
+            <div className={`xPaddings  ${css.contactsBlock}`}>
               {footerContact.map((cont, i) => {
                 return (
                   <motion.div
@@ -64,13 +64,12 @@ const Contacts = () => {
           </motion.div>
 
           <motion.span
-            className={` xPaddings ${css.bottomBlock}`}
+            className={` xPaddings  ${css.bottomBlock}`}
             variants={fadeIn("left", "tween", 0.4, 1)}>
             <TypeWriterEffect
               textStyle={{
                 fontFamily: "Eudoxus Sans",
                 color: "$secondary",
-                fontSize: 22,
                 fontWeight: 600,
               }}
               startDelay={2500}
@@ -82,7 +81,6 @@ const Contacts = () => {
               textStyle={{
                 fontFamily: "Eudoxus Sans",
                 color: "$secondary",
-                fontSize: 20,
                 fontWeight: 600,
               }}
               startDelay={7500}
