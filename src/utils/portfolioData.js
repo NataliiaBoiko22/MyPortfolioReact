@@ -2,7 +2,7 @@ export const portfolioData = [
   {
     name: "Project Management Application",
     alt: "PMA",
-    src: "../../public/project1.png",
+    src: "/project1.png",
     tech: "Angular, SCSS, Material, Responsive, Eslint, MongoDB",
     description:
       "PMA is the visual tool that empowers your team to manage any type of project, workflow, or task tracking.",
@@ -13,7 +13,7 @@ export const portfolioData = [
   {
     name: "PhoneBook",
     alt: "PhoneBook",
-    src: "../../public/project2.png",
+    src: "/project2.png",
     tech: "React, Redux, Responsive, Bootstrap",
     description:
       "The phonebook allows to store contacts and quickly search them by name. You also can update or delete contacts.",
@@ -24,7 +24,7 @@ export const portfolioData = [
   {
     name: "WeatherApp",
     alt: "WeatherApp",
-    src: "../../public/project3.png",
+    src: "/project3.png",
     tech: "JavaScript, Bootstrap, RestApi",
     description:
       "The weather app provides weather conditions, relative humidity, precipitation in different unites, wind speed.",
@@ -35,7 +35,7 @@ export const portfolioData = [
   {
     name: "OnlineZoo",
     alt: "OnlineZoo",
-    src: "../../public/project4.png",
+    src: "/project4.png",
     tech: "CSS, Responsive design, JavaScript",
     description:
       "Website with adaptive layout, decorative elements and interactive elements.",
@@ -46,7 +46,7 @@ export const portfolioData = [
   {
     name: "WebStudio",
     alt: "WebStudio",
-    src: "../../public/project5.png",
+    src: "/project5.png",
     tech: "SCSS, Responsive design, JS",
     description:
       " A website that provides information about the Web studio, team, clients, portfolio and contacts.",
@@ -58,7 +58,7 @@ export const portfolioData = [
   {
     name: "WeatherApp",
     alt: "WeatherApp",
-    src: "../../public/project6.png",
+    src: "/project6.png",
     tech: "React, Bootstrap, RestApi",
     description:
       "The weather app provides weather conditions, relative humidity, precipitation in different unites, wind speed.",
@@ -69,7 +69,7 @@ export const portfolioData = [
   {
     name: "IceCream",
     alt: "IceCream",
-    src: "../../public/project7.png",
+    src: "/project7.png",
     tech: "SCSS, Responsive design, JavaScript, Parcel",
     description:
       "Website about IceCream priducts. Create with adaptive layout, decorative elements and interactive elements.",

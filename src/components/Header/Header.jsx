@@ -3,10 +3,9 @@ import { NavLink } from "react-router-dom";
 import css from "./Header.module.scss";
 import { BiMenuAltRight } from "react-icons/bi";
 import { getMenuStyles, headerVariants } from "../../utils/motion";
-import { motion } from "framer-motion";
 import useHeaderShadow from "../../hooks/useHeaderShadow";
 import useOutsideAlerter from "../../hooks/useOutsideAlerter";
-// import resume from "../../assets/CVNataliiaBoiko.pdf";
+import resume from "/CVNataliiaBoiko.pdf";
 const Header = () => {
   const menuRef = useRef(null);
   const [menuOpened, setMenuOpened] = useState(false);
@@ -27,11 +26,7 @@ const Header = () => {
   const activeLink = ({ isActive }) =>
     isActive ? `${css.link} ${css.activeLink}` : css.link;
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="show"
-      variants={headerVariants}
-      viewport={{ once: true, amount: 0.25 }}
+    <div
       className={`bg-secondary paddings ${css.wrapper}`}
       style={{ boxShadow: headerShadow }}>
       <div className={`flexCenter innerWidth ${css.container}`}>
@@ -49,7 +44,7 @@ const Header = () => {
           style={getMenuStyles(menuOpened)}
           className={`flexCenter ${css.menu}`}>
           <NavLink className={activeLink} to="/" onClick={handleMenuLinkClick}>
-            Hero
+            Home
           </NavLink>
           <NavLink
             className={activeLink}
@@ -69,22 +64,20 @@ const Header = () => {
             onClick={handleMenuLinkClick}>
             Contacts
           </NavLink>
-          {/* <a
-            // href="https://drive.google.com/file/d/1tOa5pELmiVr2reIWZOWStVgPNE7o00-d/view?usp=sharing"
+          <a
             href={resume}
             rel="opener noreferrer"
             target="_blank"
             className={css.resumeLink}
             onClick={handleMenuLinkClick}>
             Resume
-          </a> */}
+          </a>
         </ul>
-        {/*for medium and small screens */}
         <div className={css.menuIcon} onClick={handleBurgerClick}>
           <BiMenuAltRight size={30} />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

@@ -3,7 +3,8 @@ import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 import css from "./Contacts.module.scss";
 import { motion } from "framer-motion";
 import { leftContact, footerContact } from "../../utils/data";
-import TypeWriterEffect from "react-typewriter-effect";
+// import TypeWriterEffect from "react-typewriter-effect";
+import { Typewriter } from "react-simple-typewriter";
 const Contacts = () => {
   return (
     <section className={`paddings ${css.wrapper}`}>
@@ -18,7 +19,7 @@ const Contacts = () => {
             className="primaryText"
             variants={fadeIn("right", "tween", 0.2, 1)}>
             <div className={css.topBlock}>
-              <img src="/public/splash2.png" className={css.decor} />
+              <img src="/splash2.png" className={css.decor} />
               <h2 className="xPaddings flexStart primaryText">Contact Me</h2>
               <p className=" xPaddings secondaryText flexStart">
                 {" "}
@@ -66,7 +67,7 @@ const Contacts = () => {
           <motion.span
             className={` xPaddings  ${css.bottomBlock}`}
             variants={fadeIn("left", "tween", 0.4, 1)}>
-            <TypeWriterEffect
+            {/* <TypeWriterEffect
               textStyle={{
                 fontFamily: "Eudoxus Sans",
                 color: "$secondary",
@@ -87,7 +88,21 @@ const Contacts = () => {
               cursorColor="inherit"
               text="Best Regards! Nataliia Boiko."
               typeSpeed={100}
-            />
+            /> */}
+            <span className={css.textStyle}>
+              <Typewriter
+                words={[" ", "I will try to get back to you as fast as I can."]}
+                typeSpeed={100}
+                delaySpeed={2500}
+              />
+            </span>
+            <span className={css.textStyle}>
+              <Typewriter
+                words={[" ", "Best Regards! Nataliia Boiko."]}
+                typeSpeed={100}
+                delaySpeed={7500}
+              />
+            </span>
           </motion.span>
         </div>
       </motion.div>

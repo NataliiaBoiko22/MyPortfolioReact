@@ -204,11 +204,18 @@
           height: 1.5rem;
 
           @media (min-width: $sm) {
+            width: 100%;
             height: 2.5rem;
           }
           @media (min-width: $l) {
             height: 3rem;
             margin-top: 1rem;
+            width: 80%;
+          }
+          @media (min-width: $xl) {
+            height: 3rem;
+            margin-top: 1rem;
+            width: 70%;
           }
           .blockColorR {
             width: 0%;
@@ -378,7 +385,7 @@
         @media (min-width: $l) {
           display: flex;
           flex-direction: row;
-          padding-top: 4rem;
+          padding-top: 2rem;
         }
         @media (min-width: $xl) {
           display: flex;
@@ -439,7 +446,7 @@
         align-items: center;
         justify-content: center;
         background-position: center;
-        background-image: url("../splash2.png");
+        background-image: url("/splash2.png");
         background-repeat: no-repeat;
         background-size: 20rem;
         left: -5%;

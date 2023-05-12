@@ -7,21 +7,21 @@ export const leftContact = [
     href: "https://discordapp.com/users/1017713242824507442/",
 
     alt: "Discord",
-    src: "/src/assets/icons/discord.svg",
+    src: "/discord.svg",
     bg: "rgb(124, 182, 63, 0.5)",
     descr: "NataliiaBoiko#3597",
   },
   {
     href: "https://www.linkedin.com/in/nataliia-boiko-ab48a9242/",
     alt: "Linkedin",
-    src: "/src/assets/icons/linkedin.svg",
+    src: "/linkedin.svg",
     bg: "rgb(0, 123, 181, 0.5)",
     descr: "nataliia-boiko",
   },
   {
     href: "https://github.com/NataliiaBoiko22",
     alt: "GitHub",
-    src: "/src/assets/icons/github.svg",
+    src: "/github.svg",
     bg: "rgba(255, 165, 0, 0.5)",
     descr: "NataliiaBoiko22",
   },
@@ -31,14 +31,14 @@ export const footerContact = [
   {
     href: "mailto:nata.boyko.kras@gmail.com",
     alt: "Email",
-    src: "/src/assets/icons/email.svg",
+    src: "/email.svg",
     bg: "rgba(255, 165, 0, 0.5)",
     descr: "nata.boyko.kras@gmail.com",
   },
   {
     href: "tel:+48889136970",
     alt: "Call",
-    src: "/src/assets/icons/call.svg",
+    src: "/call.svg",
     bg: "rgb(0, 123, 181, 0.5)",
     descr: `(+48) 889 136 970`,
   },
@@ -46,7 +46,7 @@ export const footerContact = [
     href: "https://t.me/boikonataliia",
 
     alt: "Telegram",
-    src: "/src/assets/icons/telegram.svg",
+    src: "/telegram.svg",
     bg: "rgb(124, 182, 63, 0.5)",
     descr: "boikonataliia",
   },
@@ -64,7 +64,7 @@ export const courses = [
     duration: "Sep 2022 - Apr 2023",
     role: "Frontend development course",
     descr: "JS/Angular ",
-    detail: "../../public/RSSchool.png",
+    detail: "/RSSchool.png",
   },
   {
     place: "SoftServe ITAcademy",
@@ -72,7 +72,7 @@ export const courses = [
     role: "Development, design and architecture of modern software system",
     descr: " ",
 
-    detail: "../../public/SoftServe.png",
+    detail: "/SoftServe.png",
   },
   {
     place: "SheCodes",
@@ -80,6 +80,6 @@ export const courses = [
     role: "Web Development Course",
     descr: "with React",
 
-    detail: "../../public/SheCodesPlus.png",
+    detail: "/SheCodesPlus.png",
   },
 ];
