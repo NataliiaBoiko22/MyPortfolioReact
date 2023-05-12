@@ -123,7 +123,7 @@
           position: relative;
           display: flex;
           align-items: center;
-          justify-content: end;
+          // justify-content: end;
           .blockColorN {
             width: 0%;
 
@@ -133,6 +133,7 @@
               forwards;
             animation-delay: 1.8s;
             display: flex;
+            height: 2rem;
             bottom: 0.1rem;
             @media (min-width: $md) {
               height: 2.5rem;

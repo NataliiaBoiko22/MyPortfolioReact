@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
@@ -27,5 +28,6 @@
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^3.0.0",
     "vite": "^4.0.0"
-  }
+  },
+  "homepage": "https://nataliiaboiko22.github.io/MyPortfolioReact/"
 }
