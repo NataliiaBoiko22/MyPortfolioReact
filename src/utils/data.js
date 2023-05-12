@@ -31,7 +31,7 @@ export const footerContact = [
   {
     href: "mailto:nata.boyko.kras@gmail.com",
     alt: "Email",
-    src: "../../src/assets/icons/email.svg",
+    src: "/src/assets/icons/email.svg",
     bg: "rgba(255, 165, 0, 0.5)",
     descr: "nata.boyko.kras@gmail.com",
   },
@@ -46,7 +46,7 @@ export const footerContact = [
     href: "https://t.me/boikonataliia",
 
     alt: "Telegram",
-    src: "../../src/assets/icons/telegram.svg",
+    src: "/src/assets/icons/telegram.svg",
     bg: "rgb(124, 182, 63, 0.5)",
     descr: "boikonataliia",
   },

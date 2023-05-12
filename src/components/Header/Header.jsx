@@ -6,7 +6,7 @@ import { getMenuStyles, headerVariants } from "../../utils/motion";
 import { motion } from "framer-motion";
 import useHeaderShadow from "../../hooks/useHeaderShadow";
 import useOutsideAlerter from "../../hooks/useOutsideAlerter";
-import resume from "../../assets/CVNataliiaBoiko.pdf";
+// import resume from "../../assets/CVNataliiaBoiko.pdf";
 const Header = () => {
   const menuRef = useRef(null);
   const [menuOpened, setMenuOpened] = useState(false);
@@ -69,7 +69,7 @@ const Header = () => {
             onClick={handleMenuLinkClick}>
             Contacts
           </NavLink>
-          <a
+          {/* <a
             // href="https://drive.google.com/file/d/1tOa5pELmiVr2reIWZOWStVgPNE7o00-d/view?usp=sharing"
             href={resume}
             rel="opener noreferrer"
@@ -77,7 +77,7 @@ const Header = () => {
             className={css.resumeLink}
             onClick={handleMenuLinkClick}>
             Resume
-          </a>
+          </a> */}
         </ul>
         {/*for medium and small screens */}
         <div className={css.menuIcon} onClick={handleBurgerClick}>

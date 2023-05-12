@@ -53,7 +53,7 @@
   gap: 1.5rem;
   cursor: pointer;
 }
-@media (max-width: 480px), (max-width: 768px) {
+@media (max-width: 480px), (max-width: 767px) {
   .wrapper .container .menu {
     position: absolute;
     list-style: none;
@@ -137,10 +137,10 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
 }
 .wrapper .container .menuIcon {
-  display: none;
+  display: block;
 }
-@media (max-width: 480px), (max-width: 768px) {
+@media (min-width: 767px) {
   .wrapper .container .menuIcon {
-    display: block;
+    display: none;
   }
 }/*# sourceMappingURL=Header.module.css.map */
