@@ -21,9 +21,7 @@ const About = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`paddings yPaddings innerWidth flexCenter ${css.container}`}>
         <div className={css.topSide}>
-          {/* left side */}
-
-          <div className={css.leftSide}>
+         <div className={css.leftSide}>
             {leftContact.map((cont, i) => {
               return (
                 <motion.div
@@ -43,7 +41,6 @@ const About = () => {
               );
             })}
           </div>
-          {/* right */}
           <motion.div variants={textVariant(0.5)} className={css.rightSide}>
             <span className="primaryText flexCenter">
               Hi, I'm Nataliia Boiko

@@ -3,10 +3,6 @@ import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 import css from "./Home.module.scss";
 import { motion } from "framer-motion";
 import Cube from "./Cube/Cube";
-// import TypeWriterEffect from "react-typewriter-effect";
-// import { Typewriter } from "react-typewriting-effect";
-
-// import "react-typewriting-effect/dist/index.css";
 import { Typewriter } from "react-simple-typewriter";
 const Home = () => {
   return (
@@ -48,23 +44,9 @@ const Home = () => {
           <motion.span
             className={css.loveText}
             variants={fadeIn("left", "tween", 0.4, 1)}>
-            {/* <TypeWriterEffect
-              startDelay={4500}
-              cursorColor="inherit"
-              text="I Love What I Do!"
-              typeSpeed={100}
-            /> */}
-            {/* <Typewriter
-              string="I Love What I Do!"
-              delay={4500}
-              stopBlinkinOnComplete
-              cursor="_"
-            /> */}
             <Typewriter
               startDelay={4000}
               words={[" ", "I Love What I Do!"]}
-              cursor
-              cursorStyle="_"
               typeSpeed={200}
               delaySpeed={4000}
             />

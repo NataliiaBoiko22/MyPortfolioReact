@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import css from "./Header.module.scss";
 import { BiMenuAltRight } from "react-icons/bi";
-import { getMenuStyles, headerVariants } from "../../utils/motion";
+import { getMenuStyles } from "../../utils/motion";
 import useHeaderShadow from "../../hooks/useHeaderShadow";
 import useOutsideAlerter from "../../hooks/useOutsideAlerter";
 import resume from "/CVNataliiaBoiko.pdf";
@@ -14,13 +14,11 @@ const Header = () => {
   const handleBurgerClick = () => {
     return setMenuOpened((prevMenuOpened) => !prevMenuOpened);
   };
-  //to handle click outside of sidebar on mobile
   useOutsideAlerter({
     menuRef,
     setMenuOpened: () => setMenuOpened(false),
   });
   const handleMenuLinkClick = () => {
-    // Close the menu when a link is clicked
     setMenuOpened(false);
   };
   const activeLink = ({ isActive }) =>

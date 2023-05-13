@@ -3,7 +3,6 @@ import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 import css from "./Contacts.module.scss";
 import { motion } from "framer-motion";
 import { leftContact, footerContact } from "../../utils/data";
-// import TypeWriterEffect from "react-typewriter-effect";
 import { Typewriter } from "react-simple-typewriter";
 const Contacts = () => {
   return (
@@ -67,28 +66,6 @@ const Contacts = () => {
           <motion.span
             className={` xPaddings  ${css.bottomBlock}`}
             variants={fadeIn("left", "tween", 0.4, 1)}>
-            {/* <TypeWriterEffect
-              textStyle={{
-                fontFamily: "Eudoxus Sans",
-                color: "$secondary",
-                fontWeight: 600,
-              }}
-              startDelay={2500}
-              cursorColor="inherit"
-              text="I will try to get back to you as fast as I can."
-              typeSpeed={100}
-            />
-            <TypeWriterEffect
-              textStyle={{
-                fontFamily: "Eudoxus Sans",
-                color: "$secondary",
-                fontWeight: 600,
-              }}
-              startDelay={7500}
-              cursorColor="inherit"
-              text="Best Regards! Nataliia Boiko."
-              typeSpeed={100}
-            /> */}
             <span className={css.textStyle}>
               <Typewriter
                 words={[" ", "I will try to get back to you as fast as I can."]}
