@@ -19,6 +19,13 @@ export const skillsData = [
     bg: "#286F6C",
   },
   {
+    name: "Typescript",
+
+    alt: "Typescript",
+    src: "/typescript.svg",
+    bg: "#286F6C",
+  },
+  {
     name: "React",
 
     alt: "React",

@@ -61,10 +61,11 @@ const Portfolio = () => {
                     className="image-with-description"
                     onMouseEnter={() => toggleDescription(i)}
                     onMouseLeave={() => toggleDescription(i)}>
-                    <motion.img
+                    <img
                       className={css.image}
                       src={exp.src}
                       alt={exp.alt}
+                      width={100}
                       animate={
                         isDescriptionVisible ? { opacity: 0.3 } : { opacity: 1 }
                       }

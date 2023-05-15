@@ -13,9 +13,6 @@
       justify-content: space-around;
       flex-wrap: wrap;
       > div {
-        @media (max-width: $sm) {
-          width: 100%;
-        }
         border-radius: 20px;
         max-width: 30rem;
         max-height: 30rem;

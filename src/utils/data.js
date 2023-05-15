@@ -1,4 +1,3 @@
-
 export const leftContact = [
   {
     href: "https://discordapp.com/users/1017713242824507442/",
@@ -52,7 +51,7 @@ export const WhoIam = [
   " I'm a Frontend Developer whose whole interest is building interactive, accessible, and responsive websites. ",
   "I am passionate about constantly improving my skills and knowledge in the field.My approach to development involves a strong focus on achieving results through dedicated work and practice. ",
   "I'm currently open to Job opportunities where I can contribute to your business and make  your users happy. ",
-  "Contact me if you're interested in having a taste of my skills. ",
+  "Contact me if you're interested in collaboration. ",
 ];
 
 export const courses = [
