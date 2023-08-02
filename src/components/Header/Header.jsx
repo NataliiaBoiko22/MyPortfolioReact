@@ -5,7 +5,7 @@ import { BiMenuAltRight } from "react-icons/bi";
 import { getMenuStyles } from "../../utils/motion";
 import useHeaderShadow from "../../hooks/useHeaderShadow";
 import useOutsideAlerter from "../../hooks/useOutsideAlerter";
-import resume from "/CVNataliiaBoiko.pdf";
+import resume from "/CVBoikoN08.23.pdf";
 const Header = () => {
   const menuRef = useRef(null);
   const [menuOpened, setMenuOpened] = useState(false);

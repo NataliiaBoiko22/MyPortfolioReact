@@ -69,6 +69,12 @@ const Courses = () => {
                 className={css.circle}
                 style={{ background: "#007bb5" }}></div>
             </div>
+            <div>
+              <div
+                className={css.circle}
+                style={{ background: "#7cb63f" }}></div>
+            </div>
+
           </motion.div>
         </div>
       </div>

@@ -6,7 +6,7 @@ export const portfolioData = [
     tech: "Angular, SCSS, Material, Responsive, Eslint, MongoDB",
     description:
       "PMA is the visual tool that empowers your team to manage any type of project, workflow, or task tracking.",
-    demo: "https://merry-tarsier-19beb8.netlify.app/",
+    demo: "https://p-m-application.netlify.app/",
     code: "https://github.com/NataliiaBoiko22/project-m-application/tree/project-management-app",
     bg: "#286F6C",
   },

@@ -5,7 +5,7 @@ export const leftContact = [
     alt: "Discord",
     src: "/discord.svg",
     bg: "rgb(124, 182, 63, 0.5)",
-    descr: "NataliiaBoiko#3597",
+    descr: "nataliiaboiko",
   },
   {
     href: "https://www.linkedin.com/in/nataliia-boiko-ab48a9242/",
@@ -55,6 +55,13 @@ export const WhoIam = [
 ];
 
 export const courses = [
+  {
+    place: "GOIT",
+    duration: "Nov 2022 - Jun 2023",
+    role: "Fullstack developer course",
+    descr: "JS/React/Node.js ",
+    detail: "/GOIT.png",
+  },
   {
     place: "Rolling Scopes School [English]",
     duration: "Sep 2022 - Apr 2023",
