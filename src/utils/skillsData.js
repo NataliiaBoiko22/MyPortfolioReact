@@ -47,6 +47,13 @@ export const skillsData = [
     bg: "#286F6C",
   },
   {
+    name: "NgRX",
+
+    alt: "NgRX",
+    src: "/ngrx.svg",
+    bg: "#286F6C",
+  },
+  {
     name: "Bootstrap",
 
     alt: "Bootstrap",
@@ -72,6 +79,13 @@ export const skillsData = [
 
     alt: "RestApi",
     src: "/restapi.svg",
+    bg: "#286F6C",
+  },
+  {
+    name: "Jest",
+
+    alt: "Jest",
+    src: "/public/Jest.png",
     bg: "#286F6C",
   },
   {

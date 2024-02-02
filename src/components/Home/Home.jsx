@@ -35,7 +35,7 @@ const Home = () => {
 
                 <div className={css.roleN}>
                   <span className={css.blockColorR}></span>
-                  <p className="secondaryText">FrontEnd developer</p>
+                  <p className="secondaryText">WEB developer</p>
                 </div>
               </div>
             </div>
